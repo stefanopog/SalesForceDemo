@@ -1,0 +1,16 @@
+{
+    "AS_FlexContainer_c49c0954f3034ed791ba47478fcdd6b4": {
+        "id": "AS_FlexContainer_c49c0954f3034ed791ba47478fcdd6b4",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_aeded4c7560e4c3282e1724be95e9633",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var phoneText = self.view.lblPhoneValue.text;\nvar phoneNbr = Number(phoneText.replace(/\\D/g,''));\nvoltmx.phone.dial(phoneNbr);"
+        }]
+    }
+}

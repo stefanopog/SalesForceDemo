@@ -1,0 +1,22 @@
+{
+    "AS_UWI_f90d06fe10104afc9d615d59081000c2": {
+        "id": "AS_UWI_f90d06fe10104afc9d615d59081000c2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "je2ee701f7ac410991eaae2304d465fd",
+            "name": "frmAccountDetail"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "OPEN_URL_b91c066c71e1430aa0150cf08e9137a1",
+            "type": "OPEN_URL",
+            "url": "https://www.hcltechsw.com/products/volt-mx"
+        }]
+    }
+}

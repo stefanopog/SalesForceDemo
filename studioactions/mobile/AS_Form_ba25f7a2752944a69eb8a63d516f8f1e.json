@@ -1,0 +1,51 @@
+{
+    "AS_Form_ba25f7a2752944a69eb8a63d516f8f1e": {
+        "id": "AS_Form_ba25f7a2752944a69eb8a63d516f8f1e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "e73e581cee2b431da5950e492a838547",
+            "name": "frmLogin"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__bd02c5a6b2474fae809080dbdf2d0b8d",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAccounts",
+            "formKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "projectName": "SalesForceDemo",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_SERVICE_f934aff64dc94468a58d39e04fb9a089",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ADD_SNIPPET_ee9997932a704b469a58ed3dcdb503aa",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// This code sets a default browser thats less than full screen\nif (!self.view.defaultBrowserWidgetForOauth2) \n  {\n        self.view.add(new voltmx.ui.Browser({\n            \"id\": \"defaultBrowserWidgetForOauth2\",\n            \"left\": \"0dp\",\n            \"top\": \"10%\",\n            \"width\": \"100%\",\n            \"height\": \"90%\"\n        }, {}, {}));\n  }",
+            "parentId": null
+        }, {
+            "id": "INVOKE_SERVICE_f934aff64dc94468a58d39e04fb9a089",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "operationname": "login",
+                "servicename": "SFDCGD",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "oauth2"
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }]
+    }
+}

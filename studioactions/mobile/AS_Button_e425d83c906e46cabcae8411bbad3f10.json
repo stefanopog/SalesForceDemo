@@ -1,0 +1,92 @@
+{
+    "AS_Button_e425d83c906e46cabcae8411bbad3f10": {
+        "id": "AS_Button_e425d83c906e46cabcae8411bbad3f10",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "g4a1418973304f5fab3d6667407be5c7"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_bf64a194dfab4d3b9cb47f17f3ed5b0f",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_j2b938c880bb453b82e0005157e67716",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "sampleOrders",
+                "type": "objectsvcs",
+                "objectname": "sample_order",
+                "serviceid": "2a10f14a-326b-45ff-a31d-317d244c27f2",
+                "methodname": "create"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_a070a02d6fa645b4adad71cfc571c9f7",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_j2b938c880bb453b82e0005157e67716",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_bc0336ed064c47c9a7ea0633433da585",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "sample_order.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_j2b938c880bb453b82e0005157e67716",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_h1de0652c4e140c7a0e654fbccd6a549",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_j2b938c880bb453b82e0005157e67716",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c3c00bc013354cefb50b066c5b27a216",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Record creation failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_h1de0652c4e140c7a0e654fbccd6a549",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

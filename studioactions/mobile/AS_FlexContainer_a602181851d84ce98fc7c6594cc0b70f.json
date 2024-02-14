@@ -1,0 +1,16 @@
+{
+    "AS_FlexContainer_a602181851d84ce98fc7c6594cc0b70f": {
+        "id": "AS_FlexContainer_a602181851d84ce98fc7c6594cc0b70f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_b3a99c3ac3fe43d3904f02c070af2f53",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.application.openURL(self.view.lblWebsiteValue.text);\n\n"
+        }]
+    }
+}

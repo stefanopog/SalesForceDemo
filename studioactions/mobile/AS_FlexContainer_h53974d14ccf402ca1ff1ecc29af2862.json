@@ -1,0 +1,71 @@
+{
+    "AS_FlexContainer_h53974d14ccf402ca1ff1ecc29af2862": {
+        "id": "AS_FlexContainer_h53974d14ccf402ca1ff1ecc29af2862",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__ba34c4e05d9b410891d3950b5078f1ce",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAccountDetail",
+            "widgetId": "mapShipTo",
+            "propertyName": "isVisible",
+            "propertyValue": "true",
+            "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "widgetKUID": "i09617ed1b074f3394b0ec847d1d1301",
+            "isSkinProperty": false,
+            "wType": "Map",
+            "forkedPlatform": "all",
+            "parentId": "_a87fda24f86e46c791df334a3ccf3bc1",
+            "widgetPath": "this.view.mapShipTo"
+        }, {
+            "id": "_i2aec0d135774d4bbc91d0f936dfd8ad",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.mapShipTo.isVisible",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true",
+                "leftItemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                "leftWidgetKUID": "i09617ed1b074f3394b0ec847d1d1301"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__e2ae8052b9d54c3ba9d1ec9173ae4024",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAccountDetail",
+            "widgetId": "mapShipTo",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "widgetKUID": "i09617ed1b074f3394b0ec847d1d1301",
+            "isSkinProperty": false,
+            "wType": "Map",
+            "forkedPlatform": "all",
+            "parentId": "_i2aec0d135774d4bbc91d0f936dfd8ad",
+            "callbackType": null,
+            "widgetPath": "this.view.mapShipTo"
+        }, {
+            "id": "_a87fda24f86e46c791df334a3ccf3bc1",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }]
+    }
+}

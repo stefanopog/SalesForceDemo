@@ -1,0 +1,16 @@
+{
+    "AS_FlexContainer_f1f5c3342e1d4c32a007f6fbd1c27a08": {
+        "id": "AS_FlexContainer_f1f5c3342e1d4c32a007f6fbd1c27a08",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_jf4b9df8ee7b4da38a6248b5086e8a9d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.application.openURL(this.view.advancedhamburgermenu.flxTargetContainer.lblWebsiteValue.text);"
+        }]
+    }
+}

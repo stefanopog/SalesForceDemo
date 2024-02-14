@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_fb2f0320ae6f493081255b2fb82f57b0": {
+        "id": "AS_FlexContainer_fb2f0320ae6f493081255b2fb82f57b0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "userwidgets",
+            "KUID": "u6081178eb354b30b5bb7d3bbea231ee",
+            "name": "userwidgetmodel"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f5e06d9f1f58481f900e11f69ac09131",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.addLocationsToMap();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

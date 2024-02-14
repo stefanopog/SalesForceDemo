@@ -1,0 +1,25 @@
+{
+    "AS_Button_dd056214901a4058bc1e2e35d004fc3d": {
+        "id": "AS_Button_dd056214901a4058bc1e2e35d004fc3d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "type": "templates",
+            "platform": "",
+            "KUID": "fa2f9dadf74d4ad598e85cd82f475a9c"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_d6ae2f288b2c4230ad72ee74e47e2199",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var removeRow = context.widgetInfo.selectedIndices[0][1][0];\nthis.view.segItems.removeAt(removeRow);\nthis.view.forceLayout();",
+            "parentId": null
+        }]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_b2d3b95dc51d441cb2eb0e400ae39e17": {
+        "id": "AS_FlexContainer_b2d3b95dc51d441cb2eb0e400ae39e17",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "je2ee701f7ac410991eaae2304d465fd",
+            "name": "frmAccountDetail"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_hd3d0080515a43e9b8c4091725f66cfb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var phoneText = self.view.advancedhamburgermenu.flxTargetContainer.lblPhoneValue.text;\nvar phoneNbr = Number(phoneText.replace(/\\D/g,''));\nkony.phone.dial(phoneNbr);",
+            "parentId": null
+        }]
+    }
+}

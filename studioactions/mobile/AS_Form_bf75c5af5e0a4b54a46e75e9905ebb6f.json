@@ -1,0 +1,180 @@
+{
+    "AS_Form_bf75c5af5e0a4b54a46e75e9905ebb6f": {
+        "id": "AS_Form_bf75c5af5e0a4b54a46e75e9905ebb6f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "name": "frmAccounts"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ifae89e6463f44d08d9df90b1ea486d6",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_ONLY_CENTER",
+            "isBlocked": "true",
+            "showProgressIndicator": "false",
+            "text": "Loading..."
+        }, {
+            "id": "ADD_MAPPING_ed04e109db1b43ed84eeda77ed1644db",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_cc4ad07c18ed4b73a5a3c641cce9e7f0": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_cc4ad07c18ed4b73a5a3c641cce9e7f0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Account",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "rowData",
+                        "widgetId": "segAccounts",
+                        "widgetPath": "this.view.segAccounts",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmAccounts",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "e3a9ee46186b44bdaa403a18d1b2bd77",
+                        "itemKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_ge3dc5e91a2647668419942b3914b64b": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_ge3dc5e91a2647668419942b3914b64b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Id",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Id\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblAccountID",
+                        "widgetPath": "this.view.lblAccountID",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmAccounts",
+                        "parentMappingId": "ME_Mapping_cc4ad07c18ed4b73a5a3c641cce9e7f0",
+                        "segmentId": "segAccounts",
+                        "segmentKUID": "e3a9ee46186b44bdaa403a18d1b2bd77",
+                        "widgetKUID": "caa455bbe34c4361b625e9b15e334828",
+                        "itemKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a84fbe6625a140148f5583608d496234": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_a84fbe6625a140148f5583608d496234",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Name",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Name\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblAccountName",
+                        "widgetPath": "this.view.lblAccountName",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmAccounts",
+                        "parentMappingId": "ME_Mapping_cc4ad07c18ed4b73a5a3c641cce9e7f0",
+                        "segmentId": "segAccounts",
+                        "segmentKUID": "e3a9ee46186b44bdaa403a18d1b2bd77",
+                        "widgetKUID": "d44f4f8fbc8243778fde866f0538e714",
+                        "itemKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_cc4ad07c18ed4b73a5a3c641cce9e7f0", "ME_Mapping_ge3dc5e91a2647668419942b3914b64b", "ME_Mapping_a84fbe6625a140148f5583608d496234"],
+            "parentId": "INVOKE_SERVICE_d2ff89383cfa43b4a205b05abe7efd9a",
+            "callbackType": "Callback",
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_j79a1fd7fddc47b3bf5e48f0cc802ba2",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_d2ff89383cfa43b4a205b05abe7efd9a",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_SERVICE_d2ff89383cfa43b4a205b05abe7efd9a",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "SalesforceServices",
+                "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                "type": "integration",
+                "operationname": "Account_get",
+                "operationid": "6144"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_b6dfee6b89f7480382b8ffb5cd506f71",
+            "selectedOption": "dismiss",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

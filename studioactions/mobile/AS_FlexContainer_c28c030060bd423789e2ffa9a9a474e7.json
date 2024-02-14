@@ -1,0 +1,64 @@
+{
+    "AS_FlexContainer_c28c030060bd423789e2ffa9a9a474e7": {
+        "id": "AS_FlexContainer_c28c030060bd423789e2ffa9a9a474e7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "IF_CONDITION_ide_onClick_gfc1114d5a914a3da9aa14478c4e7b4a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true",
+                "leftItemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                "leftWidgetKUID": "ga5f1180736d4e5698d1668c873061d6"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY___dd4f30140706494bb95be3339185bf34",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAccountDetail",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "widgetKUID": "ga5f1180736d4e5698d1668c873061d6",
+            "isSkinProperty": false,
+            "wType": "Map",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onClick_gfc1114d5a914a3da9aa14478c4e7b4a"
+        }, {
+            "id": "ELSE_CONDITION_ide_onClick_j2d611cb58044ecd8897450bbef37204",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY___f84c82b27488459da36a240f36234583",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAccountDetail",
+            "propertyName": "isVisible",
+            "propertyValue": "true",
+            "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "widgetKUID": "ga5f1180736d4e5698d1668c873061d6",
+            "isSkinProperty": false,
+            "wType": "Map",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_ide_onClick_j2d611cb58044ecd8897450bbef37204"
+        }]
+    }
+}

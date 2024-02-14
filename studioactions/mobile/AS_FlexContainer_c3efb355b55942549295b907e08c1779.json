@@ -1,0 +1,21 @@
+{
+    "AS_FlexContainer_c3efb355b55942549295b907e08c1779": {
+        "id": "AS_FlexContainer_c3efb355b55942549295b907e08c1779",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "name": "frmAccounts"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "EXIT_APP_h3d0ee1198a74c56a315270dc06f9b78",
+            "type": "EXIT_APP"
+        }]
+    }
+}

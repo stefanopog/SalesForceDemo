@@ -1,0 +1,76 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        5,
+        0,
+        5,
+        0
+    ],
+    "_skin_": "sfb4dace90d14840a017d1ac60c698b7",
+    "_text_": "URL",
+    "_top_": {
+        "type": "string",
+        "value": "2dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_wrapping_": 2,
+    "actionsInfo": {
+        "dataCollectionId": "Account",
+        "dataPropertyName": "Website",
+        "widgetPropertyName": "text"
+    },
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "id": "lblWebsiteValue",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "textCopyable": false,
+            "wrapping": 2
+        },
+        "textStyle": {
+            "baseline": 0
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "fb6cffe6bd534687b1b138636985e803",
+    "name": "kony.ui.Label",
+    "parent": "flexWebsite",
+    "pf": "frmAccountDetail",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "textstyle": {},
+    "tooltip": "",
+    "wType": "Label"
+}

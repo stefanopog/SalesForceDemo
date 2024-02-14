@@ -1,0 +1,98 @@
+{
+    "AS_Form_c41dd4853df04b638e6d825bdaffa634": {
+        "id": "AS_Form_c41dd4853df04b638e6d825bdaffa634",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "a38a867b8bad44c5b1bf71311d3c051d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_h6fecb26aab94b658239fb876b785f76",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_ASYNC_SERVICE_a189d9c0c61d4f408e6ace8a683769c1",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "sapjcoMaterial",
+                "type": "integration",
+                "operationname": "BAPI_MATERIAL_GETLIST",
+                "serviceid": "56070dc9-e61c-4fc4-9b74-2ffbded7d4d8",
+                "operationid": "10390090"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_f723d850381e48b487a1487bcc30d09f",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_ASYNC_SERVICE_a189d9c0c61d4f408e6ace8a683769c1",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_c14e56cc36704bd88381655858c5751c",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "BAPI_MATERIAL_GETLIST.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_a189d9c0c61d4f408e6ace8a683769c1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_c9c05794bee641bda72218e7168ddf65",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_ASYNC_SERVICE_a189d9c0c61d4f408e6ace8a683769c1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_i0b1abdc884549a9a21d1906f147c519",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Data fetch failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_c9c05794bee641bda72218e7168ddf65",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_MAPPING_ee465dc43e5a403682bb9a82a9b3575f",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_IF_CONDITION_c14e56cc36704bd88381655858c5751c",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

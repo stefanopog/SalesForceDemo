@@ -1,0 +1,16 @@
+{
+    "AS_FlexContainer_j903e36950be44b7ae7009c921c29a2a": {
+        "id": "AS_FlexContainer_j903e36950be44b7ae7009c921c29a2a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_e2da6e40bd1649468b0ca8f38acf3969",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var phoneText = self.view.advancedhamburgermenu.flxTargetContainer.lblPhoneValue.text;\nvar phoneNbr = Number(phoneText.replace(/\\D/g,''));\nkony.phone.dial(phoneNbr);"
+        }]
+    }
+}

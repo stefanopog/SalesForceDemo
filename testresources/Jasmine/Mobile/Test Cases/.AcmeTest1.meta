@@ -1,0 +1,12 @@
+{
+    "testCaseName": "AcmeTest1",
+    "testSuiteName": "Test Cases",
+    "channelName": "Mobile",
+    "steps": [],
+    "_currentForm": "",
+    "timeout": 0,
+    "usedBy": {
+        "SalesForceDemo": []
+    },
+    "appName": "SalesForceDemo"
+}

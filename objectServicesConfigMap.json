@@ -1,0 +1,30 @@
+{
+    "SalesDeal_Deal": {
+        "servicename": "SalesDeal",
+        "serviceid": "1ee65db7-c328-4f25-bc8f-56d84f9912d7",
+        "type": "objectsvcs",
+        "objectname": "Deal",
+        "objectid": "162679"
+    },
+    "SalesDeal_Enterprise_Queue": {
+        "servicename": "SalesDeal",
+        "serviceid": "1ee65db7-c328-4f25-bc8f-56d84f9912d7",
+        "type": "objectsvcs",
+        "objectname": "Enterprise_Queue",
+        "objectid": "162680"
+    },
+    "SalesDeal_nonEnterprise_Queue": {
+        "servicename": "SalesDeal",
+        "serviceid": "1ee65db7-c328-4f25-bc8f-56d84f9912d7",
+        "type": "objectsvcs",
+        "objectname": "nonEnterprise_Queue",
+        "objectid": "162681"
+    },
+    "SalesQuote_QuoteHeader": {
+        "servicename": "SalesQuote",
+        "serviceid": "4f4ee2b8-2aac-4d0d-8492-f06df4968f7f",
+        "type": "objectsvcs",
+        "objectname": "QuoteHeader",
+        "objectid": "162608"
+    }
+}

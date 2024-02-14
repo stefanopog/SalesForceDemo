@@ -1,0 +1,23 @@
+{
+    "AS_Segment_ac5ee78d52a640a088ea9404781a24a4": {
+        "id": "AS_Segment_ac5ee78d52a640a088ea9404781a24a4",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "seguiWidget"
+        }, {
+            "datatype": "number",
+            "name": "sectionIndex"
+        }, {
+            "datatype": "number",
+            "name": "rowIndex"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "g4a1418973304f5fab3d6667407be5c7"
+        },
+        "language": "js",
+        "actions": []
+    }
+}

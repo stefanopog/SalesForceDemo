@@ -1,0 +1,29 @@
+{
+    "AS_FlexContainer_h6f22a2eb7c34a8dbe44645183ae5887": {
+        "id": "AS_FlexContainer_h6f22a2eb7c34a8dbe44645183ae5887",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmAccountDetail",
+            "type": "forms",
+            "platform": "",
+            "KUID": "je2ee701f7ac410991eaae2304d465fd"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__caa49ed0152946b49c852d0348252b70",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAccounts",
+            "formKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "projectName": "SalesForceDemo",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

@@ -1,0 +1,1040 @@
+{
+    "AS_Form_hd6e1a6fb4044ae6ab9a9d30bee42947": {
+        "id": "AS_Form_hd6e1a6fb4044ae6ab9a9d30bee42947",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "je2ee701f7ac410991eaae2304d465fd",
+            "name": "frmAccountDetail"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_h5bd873f23e648eda5c22cce8aca20f5",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_b45f77c586484a7da234057388df18fa",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "Account_get_inputparam",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "collection",
+            "value": "{\"$filter\": \"Id eq \"+ this.navigationContext.segAccounts_lblAccountID}",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_ASYNC_SERVICE_i0c92da3f13e4644a1f05b12a647428c",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": [{
+                "name": "$filter",
+                "value": ""
+            }],
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "SalesforceServices",
+                "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                "type": "integration",
+                "operationname": "Account_get",
+                "operationid": "6144"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_IF_CONDITION_h97b7c6b17df4b3284d2faa020748b5a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "Account_get.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_i0c92da3f13e4644a1f05b12a647428c",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_dbda09cc49254bdca4c8402e1e591173",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_i0c92da3f13e4644a1f05b12a647428c",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_g84ac457e23f4da9b08316ee10bc40cb",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_ASYNC_SERVICE_i0c92da3f13e4644a1f05b12a647428c",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_e585c8358f144d3b97485c6424db967d",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Data fetch failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_dbda09cc49254bdca4c8402e1e591173",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_MAPPING_eb293f72e9ee461caa1dd62b975cda21",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_f840d9830998463093d34596c6e54259": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_f840d9830998463093d34596c6e54259",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Id",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Id\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblIdValue",
+                        "widgetPath": "this.view.lblIdValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "a9648b1ef6324abeba47261c2a9c8209",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_h56e39f05fa54422915eb8af90ee0821": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_h56e39f05fa54422915eb8af90ee0821",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Name",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Name\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblNameValue",
+                        "widgetPath": "this.view.lblNameValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "c17a629b9d5d42b5a95936266a57a596",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_cefd218894d9453da046c2a495e2e654": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_cefd218894d9453da046c2a495e2e654",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingStreet",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingStreet\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingStreetValue",
+                        "widgetPath": "this.view.lblShippingStreetValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "gca9d46ef12e494e8c253463134d5b72",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_b074812009c140678651292fef07d14e": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_b074812009c140678651292fef07d14e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingCity",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingCity\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingCityValue",
+                        "widgetPath": "this.view.lblShippingCityValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "eb44028768314a00929dff0cd0b96b6b",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_f877b8b923754828991072c03b1b2d32": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_f877b8b923754828991072c03b1b2d32",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingState",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingState\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingStateValue",
+                        "widgetPath": "this.view.lblShippingStateValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "baa8543b94cb4dbda6453865e75102d6",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_g6506564dc7547faae42269ecc8a03f7": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_g6506564dc7547faae42269ecc8a03f7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingPostalCode",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingPostalCode\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingPostalCodeValue",
+                        "widgetPath": "this.view.lblShippingPostalCodeValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "ac182ffc2389423f8daa55c5dad9c625",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_f18fb545b526426cb38e7bf3fb524b1d": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_f18fb545b526426cb38e7bf3fb524b1d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingCountry",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingCountry\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingCountryValue",
+                        "widgetPath": "this.view.lblShippingCountryValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "d8b9753be7c84a41bbf1f6831d2da382",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d90f53cdacd44dbc9311c0a997df4d69": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_d90f53cdacd44dbc9311c0a997df4d69",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingLatitude",
+                        "dataType": "number",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingLatitude\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingLatitudeValue",
+                        "widgetPath": "this.view.lblShippingLatitudeValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "c7b5b4abe55d460fa3e8b6cfc1b86f30",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_hcab9656a7624fc8897ccd39f1bcf3bd": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_hcab9656a7624fc8897ccd39f1bcf3bd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingLongitude",
+                        "dataType": "number",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingLongitude\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingLongitudeValue",
+                        "widgetPath": "this.view.lblShippingLongitudeValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "h252cf0b0785468d891e3490f211092a",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_c3be679c52da45d5a0607f3aef934de9": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_c3be679c52da45d5a0607f3aef934de9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "ShippingAddress",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"ShippingAddress\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingAddressValue",
+                        "widgetPath": "this.view.lblShippingAddressValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "b575bd9b58ba4246b55ad7e0b64039cf",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_ec178540591143d9bb15edd7846d9790": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_ec178540591143d9bb15edd7846d9790",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Phone",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Phone\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblPhoneValue",
+                        "widgetPath": "this.view.lblPhoneValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "a53d3a17ff8449bf8cf4713a2d0fe1f1",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_cb54552464f942b4a4a587510ad85778": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_cb54552464f942b4a4a587510ad85778",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Fax",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Fax\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFaxValue",
+                        "widgetPath": "this.view.lblFaxValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "c1410b5a939f4182a831b5f25420d0f6",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a8e7cb21cd28466682822d5a8cb4d7b6": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_a8e7cb21cd28466682822d5a8cb4d7b6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "AccountNumber",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"AccountNumber\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblAccountNumberValue",
+                        "widgetPath": "this.view.lblAccountNumberValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "j71aec66877a4ddaacddb0e2ea1d7b72",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_g495b830c6674492b7758ec7374e3954": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_g495b830c6674492b7758ec7374e3954",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Website",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Website\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblWebsiteValue",
+                        "widgetPath": "this.view.lblWebsiteValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "fb6cffe6bd534687b1b138636985e803",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d5afaf2002b54d79976163dcfa3ab2a6": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_d5afaf2002b54d79976163dcfa3ab2a6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "PhotoUrl",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"PhotoUrl\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblPhotoUrlValue",
+                        "widgetPath": "this.view.lblPhotoUrlValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "ec667c14426d487c9db1205788489e4b",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_db59c43cd73a4fa19b9f1663d948a48a": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_db59c43cd73a4fa19b9f1663d948a48a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Sic",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Sic\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblSicValue",
+                        "widgetPath": "this.view.lblSicValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "d2ed1f44192b4ebc8730b7ce7bd457b8",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_c33e08fa49cf4a4a9ec88d30d193f264": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_c33e08fa49cf4a4a9ec88d30d193f264",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Industry",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Industry\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblIndustryValue",
+                        "widgetPath": "this.view.lblIndustryValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "ba327d929fed464b90218880930de5a5",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_abc231cfa9c44813af8e5d1a7077905e": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_abc231cfa9c44813af8e5d1a7077905e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "AnnualRevenue",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"AnnualRevenue\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblAnnualRevenueValue",
+                        "widgetPath": "this.view.lblAnnualRevenueValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "eba989df597d483ab6e1c11da76f6545",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_af84f6c580c940cbbdb569da055c0f3d": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_af84f6c580c940cbbdb569da055c0f3d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "NumberOfEmployees",
+                        "dataType": "number",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"NumberOfEmployees\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblNumberOfEmployeesValue",
+                        "widgetPath": "this.view.lblNumberOfEmployeesValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "b1d9c41c6f1341b79654daae0e13607d",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a9189076d3ff4be0982e43a6da35bfc2": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_a9189076d3ff4be0982e43a6da35bfc2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "TickerSymbol",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"TickerSymbol\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblTickerSymbolValue",
+                        "widgetPath": "this.view.lblTickerSymbolValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "ab5bf04729064554a98ea3906d0521e1",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d7f782d0ac4f434b86e61c9e1d962a34": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_d7f782d0ac4f434b86e61c9e1d962a34",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Description",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Description\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblDescriptionValue",
+                        "widgetPath": "this.view.lblDescriptionValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "fe075cad30ce4b42ab9ddbc6b72d7991",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d819df2bef934825820238d85f1af49a": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_d819df2bef934825820238d85f1af49a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Site",
+                        "dataType": "string",
+                        "collectionId": "Account",
+                        "propertyPath": "[\"Account\"][0][\"Site\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "SalesforceServices",
+                            "serviceid": "8be40133-3171-4000-b41f-33be6fd1044a",
+                            "type": "integration",
+                            "operationname": "Account_get",
+                            "operationid": "6144"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblSiteValue",
+                        "widgetPath": "this.view.lblSiteValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "e89acc14793b4cff89555d3df67a8c19",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f840d9830998463093d34596c6e54259", "ME_Mapping_h56e39f05fa54422915eb8af90ee0821", "ME_Mapping_cefd218894d9453da046c2a495e2e654", "ME_Mapping_b074812009c140678651292fef07d14e", "ME_Mapping_f877b8b923754828991072c03b1b2d32", "ME_Mapping_g6506564dc7547faae42269ecc8a03f7", "ME_Mapping_f18fb545b526426cb38e7bf3fb524b1d", "ME_Mapping_d90f53cdacd44dbc9311c0a997df4d69", "ME_Mapping_hcab9656a7624fc8897ccd39f1bcf3bd", "ME_Mapping_c3be679c52da45d5a0607f3aef934de9", "ME_Mapping_ec178540591143d9bb15edd7846d9790", "ME_Mapping_cb54552464f942b4a4a587510ad85778", "ME_Mapping_a8e7cb21cd28466682822d5a8cb4d7b6", "ME_Mapping_g495b830c6674492b7758ec7374e3954", "ME_Mapping_d5afaf2002b54d79976163dcfa3ab2a6", "ME_Mapping_db59c43cd73a4fa19b9f1663d948a48a", "ME_Mapping_c33e08fa49cf4a4a9ec88d30d193f264", "ME_Mapping_abc231cfa9c44813af8e5d1a7077905e", "ME_Mapping_af84f6c580c940cbbdb569da055c0f3d", "ME_Mapping_a9189076d3ff4be0982e43a6da35bfc2", "ME_Mapping_d7f782d0ac4f434b86e61c9e1d962a34", "ME_Mapping_d819df2bef934825820238d85f1af49a"],
+            "parentId": "_IF_CONDITION_h97b7c6b17df4b3284d2faa020748b5a",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_c31525b910a04215a73b58ccdc70df0b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var AnnualRev = Number(Account_get.Account[0].AnnualRevenue);\nself.view.lblAnnualRevenueValue.text = AnnualRev.toLocaleString(gvCurrentLocale,{style: 'currency', currency: gvCurrentCurrancy});",
+            "parentId": "_IF_CONDITION_h97b7c6b17df4b3284d2faa020748b5a",
+            "callbackType": null
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__b599037e166f4fd6a37126f3ecd95bfd",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAccountDetail",
+            "widgetId": "flexFieldsContainer",
+            "propertyName": "isVisible",
+            "propertyValue": "true",
+            "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "widgetKUID": "b632d6f87cd44f8ba52485d7a7e7e926",
+            "isSkinProperty": false,
+            "wType": "FlexScrollContainer",
+            "forkedPlatform": "all",
+            "parentId": "_IF_CONDITION_h97b7c6b17df4b3284d2faa020748b5a",
+            "callbackType": null,
+            "widgetPath": "this.view.flexFieldsContainer"
+        }, {
+            "id": "INVOKE_SERVICE_d52ec80be00b4cdeb288cf5ef392b7bb",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_a723f5ac126642f1ae81364880abb8ee": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_a723f5ac126642f1ae81364880abb8ee",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "LocIQApiKey",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "apiKey",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "LocationIQ",
+                            "serviceid": "5de5b870-03a6-4a0c-ac07-06e4ea52480f",
+                            "type": "integration",
+                            "operationname": "GetAddressGeoLocation",
+                            "operationid": "12026644"
+                        }
+                    }
+                },
+                "ME_Mapping_b173895e88b04086a491e0e4703e4454": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_b173895e88b04086a491e0e4703e4454",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "address",
+                        "dataType": "string",
+                        "expression": "self.view.lblShippingStreetValue.text + \" \" +\nself.view.lblShippingCityValue.text + \" \" +  \nself.view.lblShippingStateValue.text + \" \" +  \nself.view.lblShippingPostalCodeValue.text",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "LocationIQ",
+                            "serviceid": "5de5b870-03a6-4a0c-ac07-06e4ea52480f",
+                            "type": "integration",
+                            "operationname": "GetAddressGeoLocation",
+                            "operationid": "12026644"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a723f5ac126642f1ae81364880abb8ee", "ME_Mapping_b173895e88b04086a491e0e4703e4454"],
+            "serviceconfig": {
+                "servicename": "LocationIQ",
+                "serviceid": "5de5b870-03a6-4a0c-ac07-06e4ea52480f",
+                "type": "integration",
+                "operationname": "GetAddressGeoLocation",
+                "operationid": "12026644"
+            },
+            "parentId": "_IF_CONDITION_h97b7c6b17df4b3284d2faa020748b5a",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_MAPPING_fdcc4506b9d74848abc8f38e3f2a40be",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_b00427cc4e324945b00d95b7480fe4ea": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_b00427cc4e324945b00d95b7480fe4ea",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "lat",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "LocationIQ",
+                            "serviceid": "5de5b870-03a6-4a0c-ac07-06e4ea52480f",
+                            "type": "integration",
+                            "operationname": "GetAddressGeoLocation",
+                            "operationid": "12026644"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingLatitudeValue",
+                        "widgetPath": "this.view.lblShippingLatitudeValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "c7b5b4abe55d460fa3e8b6cfc1b86f30",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d06061523f184e898b6ad240ca70a5de": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_d06061523f184e898b6ad240ca70a5de",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "lon",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "LocationIQ",
+                            "serviceid": "5de5b870-03a6-4a0c-ac07-06e4ea52480f",
+                            "type": "integration",
+                            "operationname": "GetAddressGeoLocation",
+                            "operationid": "12026644"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblShippingLongitudeValue",
+                        "widgetPath": "this.view.lblShippingLongitudeValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmAccountDetail",
+                        "widgetKUID": "h252cf0b0785468d891e3490f211092a",
+                        "itemKUID": "je2ee701f7ac410991eaae2304d465fd",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b00427cc4e324945b00d95b7480fe4ea", "ME_Mapping_d06061523f184e898b6ad240ca70a5de"],
+            "parentId": "INVOKE_SERVICE_d52ec80be00b4cdeb288cf5ef392b7bb",
+            "callbackType": "Callback",
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_a985a2fd87714941a7ae839a1699fe40",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.mapShipTo.locationData =\n  [{\n      \"lat\": Number(self.view.lblShippingLatitudeValue.text),\n      \"lon\": Number(self.view.lblShippingLongitudeValue.text),\n      \"name\": self.view.lblNameValue.text,\n      \"desc\": \" \"\n  }];",
+            "parentId": "INVOKE_SERVICE_d52ec80be00b4cdeb288cf5ef392b7bb",
+            "callbackType": "Callback"
+        }]
+    }
+}

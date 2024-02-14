@@ -1,0 +1,99 @@
+{
+    "AS_Form_h4d90abc0db54f51bdcd9ad69548f142": {
+        "id": "AS_Form_h4d90abc0db54f51bdcd9ad69548f142",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "je2ee701f7ac410991eaae2304d465fd",
+            "name": "frmAccountDetail"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ja73b88171a249f3aa0c9db50e7d876c",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_ASYNC_SERVICE_ba19561504e24205a4b57eccf9a72732",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "AcmeSFAccounts",
+                "type": "integration",
+                "operationname": "getAccount",
+                "serviceid": "50583c0e-b9d7-44f0-83ae-0aa2957af79d",
+                "operationid": "11893126"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_d6699c9f68cf4c489c23998cc8ad3418",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_ASYNC_SERVICE_ba19561504e24205a4b57eccf9a72732",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_e7ddb20b869c4fc49fb9e3ceb9d8b90e",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "getAccount.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ba19561504e24205a4b57eccf9a72732",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_he4e54304fe449bb8ee85c0deb784d0b",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_ASYNC_SERVICE_ba19561504e24205a4b57eccf9a72732",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c90345c057f84218886700acabc9b4ec",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Data fetch failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_he4e54304fe449bb8ee85c0deb784d0b",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_MAPPING_d99339beb97547df91316853ca36a35f",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_IF_CONDITION_e7ddb20b869c4fc49fb9e3ceb9d8b90e",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

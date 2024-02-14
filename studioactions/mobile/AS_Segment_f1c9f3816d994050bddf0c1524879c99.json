@@ -1,0 +1,67 @@
+{
+    "AS_Segment_f1c9f3816d994050bddf0c1524879c99": {
+        "id": "AS_Segment_f1c9f3816d994050bddf0c1524879c99",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "name": "frmAccounts"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__h1bca9f1ea6144638b6bf8886960b737",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAccountDetail",
+            "formKUID": "je2ee701f7ac410991eaae2304d465fd",
+            "projectName": "SalesForceDemo",
+            "mappings": {
+                "ME_Mapping_fa5e51f804a048e38e060e40e20f5cbe": {
+                    "channel": "mobile",
+                    "id": "ME_Mapping_fa5e51f804a048e38e060e40e20f5cbe",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblAccountID",
+                        "propertyKey": "segAccounts_lblAccountID",
+                        "widgetId": "segAccounts",
+                        "widgetPath": "this.view.segAccounts",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmAccounts",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "e3a9ee46186b44bdaa403a18d1b2bd77",
+                        "itemKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "caa455bbe34c4361b625e9b15e334828",
+                            "widgetType": "Label",
+                            "widgetPath": "this.view.lblAccountID"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_fa5e51f804a048e38e060e40e20f5cbe"],
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"segAccounts_lblAccountID\": voltmx.visualizer.getPropertyValue(self.view.segAccounts.selectedRowItems[0][\"lblAccountID\"], \"text\"),\n    \"_meta_\": {\n        \"eventName\": \"onRowClick\",\n        \"widgetId\": \"segAccounts\"\n    }\n}",
+            "isCustomInput": false
+        }]
+    }
+}

@@ -1,0 +1,1067 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sfae52c514a94b7aa80f696c4691fa38",
+    "_top_": {
+        "type": "string",
+        "value": "1%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "actionsInfo": {
+        "skipMapping": true
+    },
+    "allboxes": [],
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
+    "canUpdateUI": true,
+    "children": [
+        "flexSeparator",
+        "flexAccount",
+        "flexShipTo",
+        "flexShippingLatitude",
+        "flexShippingLongitude",
+        "flexShippingAddress",
+        "flexPhone",
+        "flexFax",
+        "flexAccountNumber",
+        "flexWebsite",
+        "flexPhotoUrl",
+        "flexSic",
+        "flexIndustry",
+        "flexAnnualRevenue",
+        "flexNumberOfEmployees",
+        "flexTickerSymbol",
+        "flexDescription",
+        "flexSite"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
+    "enablescrolling": true,
+    "horizontalscrollindicator": true,
+    "id": "flexFieldsContainer",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b632d6f87cd44f8ba52485d7a7e7e926",
+    "layouttype": 4,
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
+    "parent": "frmAccountDetail",
+    "pf": "frmAccountDetail",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "scrolldirection": 2,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "track": false,
+    "verticalscrollindicator": true,
+    "vizProps": {
+        "dynamicPropertiesConfig": {
+            "dataCollectionId": "Account",
+            "flexKUID": "b632d6f87cd44f8ba52485d7a7e7e926",
+            "operationName": "getAccount",
+            "serviceName": "AcmeSFAccounts",
+            "serviceType": "integration",
+            "viewType": "Detail form ui",
+            "widgetsConfig": {
+                "AccountNumber": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "d304c699cf7f48ff90804228402d1f36",
+                        "name": {
+                            "kuid": "a84efb8153d44cafa8800c72579964bb",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "j71aec66877a4ddaacddb0e2ea1d7b72",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "AccountNumber"
+                        },
+                        "generate": true,
+                        "index": 12
+                    }
+                },
+                "AccountSource": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "f61b914907f5425f84709b3275da9983",
+                        "name": {
+                            "kuid": "gab0e81da0be438bb9dc56dad6254a37",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "j71d14706d8745b0942241a55e6c1ce9",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "AccountSource"
+                        },
+                        "generate": false,
+                        "index": 41
+                    }
+                },
+                "AnnualRevenue": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "edea099adc424296a063fdd122ea2aff",
+                        "name": {
+                            "kuid": "cefaf1b17c1f485ebc05642a754027f6",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "eba989df597d483ab6e1c11da76f6545",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "AnnualRevenue"
+                        },
+                        "generate": true,
+                        "index": 17
+                    }
+                },
+                "BillingAddress": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "fd8246231ee24288bb9ca8a73984ae93",
+                        "name": {
+                            "kuid": "c3ab39bc54014d6897ed35b42fa8d465",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "h58dfed5c65648a3a8ff917f5bef1490",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingAddress"
+                        },
+                        "generate": false,
+                        "index": 39
+                    }
+                },
+                "BillingCity": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "hac0d952ff9b4b1395686ad99fd3a9ee",
+                        "name": {
+                            "kuid": "b6bf4c7e520645998af8863be04c0d77",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a9d5c9b43842493d929d414e266dc729",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingCity"
+                        },
+                        "generate": false,
+                        "index": 33
+                    }
+                },
+                "BillingCountry": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "b52e559f9bae41089d598b7685a953ba",
+                        "name": {
+                            "kuid": "e5b287a66a92448cbba0520dffe05ad2",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "fa21ae10c8b8430d9daa352ed72db90d",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingCountry"
+                        },
+                        "generate": false,
+                        "index": 36
+                    }
+                },
+                "BillingLatitude": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "e1feece918f8495eb1a91343e5476579",
+                        "name": {
+                            "kuid": "bbc197f009f24338b457b872d9ba5167",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "e63403315911406c929ee7a6d6a32a7c",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingLatitude"
+                        },
+                        "generate": false,
+                        "index": 37
+                    }
+                },
+                "BillingLongitude": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "ece01ab5bcba49c89774020580fb253e",
+                        "name": {
+                            "kuid": "d389efaa329c496eb9779c04d2a9a17d",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "e590cf99bc18455991b2c2b5a51b8f48",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingLongitude"
+                        },
+                        "generate": false,
+                        "index": 38
+                    }
+                },
+                "BillingPostalCode": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "ge086a32f3c4462a8e503df14b7698e2",
+                        "name": {
+                            "kuid": "ide6cf2cba124f57ab98e724eaf9148f",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "jfb302f2ced2437d85e066af1407bed1",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingPostalCode"
+                        },
+                        "generate": false,
+                        "index": 35
+                    }
+                },
+                "BillingState": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a43ba766ee83419393b00a55ba033009",
+                        "name": {
+                            "kuid": "ha09858c4bdf4d16a0648a9ce78bb634",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "gaa397b939e94b2e96cebcebfc3a2f7e",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingState"
+                        },
+                        "generate": false,
+                        "index": 34
+                    }
+                },
+                "BillingStreet": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a7c54fe9602a488685667d2d8d198434",
+                        "name": {
+                            "kuid": "hcf47f98da534fd8a20758907a320950",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "edfe053194094c10927ccfb6460dc852",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "BillingStreet"
+                        },
+                        "generate": false,
+                        "index": 32
+                    }
+                },
+                "CreatedById": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a7f33d8595bc4160861f87d167c4f5e5",
+                        "name": {
+                            "kuid": "h491bffa799b44d5bef88052b1708a70",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "c13badc627b047b99b86084f91db0293",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "CreatedById"
+                        },
+                        "generate": false,
+                        "index": 24
+                    }
+                },
+                "CreatedDate": {
+                    "dataType": "date",
+                    "layoutConfig": {
+                        "kuid": "a2f2059db49344e19b552ce31d6d22e8",
+                        "name": {
+                            "kuid": "idc25b512e194126a6cbe7ba71a8fe6b",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a3e34741055947288d9b361ddb80f129",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "CreatedDate"
+                        },
+                        "generate": false,
+                        "index": 23
+                    }
+                },
+                "Description": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "f7ae79b0d90a451dbbd90c5a1cced3e1",
+                        "name": {
+                            "kuid": "d618b5aabcba4effbd9a33484818cdac",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "fe075cad30ce4b42ab9ddbc6b72d7991",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Description"
+                        },
+                        "generate": true,
+                        "index": 20
+                    }
+                },
+                "Fax": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "faaea877e2744d60b452c41a49bd377f",
+                        "name": {
+                            "kuid": "d014d5c0dc7c4553891198b3cc29922c",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "c1410b5a939f4182a831b5f25420d0f6",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Fax"
+                        },
+                        "generate": true,
+                        "index": 11
+                    }
+                },
+                "Id": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "i3cebb09f9a2408b90fdc210496e0395",
+                        "name": {
+                            "kuid": "bd4a46694c7248b3bd90180a89967627",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a9648b1ef6324abeba47261c2a9c8209",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Id"
+                        },
+                        "generate": true,
+                        "index": 0
+                    }
+                },
+                "Industry": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "g514d8ec678f47d58470612aff9c4078",
+                        "name": {
+                            "kuid": "g2d9503777c24c2bb90cd27ed8ab34f1",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "ba327d929fed464b90218880930de5a5",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Industry"
+                        },
+                        "generate": true,
+                        "index": 16
+                    }
+                },
+                "IsDeleted": {
+                    "dataType": "boolean",
+                    "layoutConfig": {
+                        "kuid": "j39e8f2223bc44d7945b477d394aeea5",
+                        "name": {
+                            "kuid": "i78b09c933c349608dfae5d30dbfa2af",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "bcfc26f601a14496ad8082d1af39255b",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "IsDeleted"
+                        },
+                        "generate": false,
+                        "index": 22
+                    }
+                },
+                "LastModifiedById": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "c10060e953374335a8771ce422ce555c",
+                        "name": {
+                            "kuid": "ba0071a6b69d4a5da63c7260fce7d21f",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "cec293c7081f4ec0be9b66572c5aa3bd",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastModifiedById"
+                        },
+                        "generate": false,
+                        "index": 26
+                    }
+                },
+                "LastModifiedDate": {
+                    "dataType": "date",
+                    "layoutConfig": {
+                        "kuid": "aaa673ea5cc14fb59d7228bde34b9747",
+                        "name": {
+                            "kuid": "hcea734be20041d7904e36dd6a6924ef",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a9954daf231e459da0202dbe086635a0",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastModifiedDate"
+                        },
+                        "generate": false,
+                        "index": 25
+                    }
+                },
+                "LastReferencedDate": {
+                    "dataType": "date",
+                    "layoutConfig": {
+                        "kuid": "j9c21c0a8a5f4dcfa37b0fa3bde1ccd8",
+                        "name": {
+                            "kuid": "jdbdcca0566842be84ff897b0c0441e8",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a8708c7b3e15497a935caf140e8582a9",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastReferencedDate"
+                        },
+                        "generate": false,
+                        "index": 28
+                    }
+                },
+                "MasterRecordId": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a81d57fbfc8a466d928ac7a22283da12",
+                        "name": {
+                            "kuid": "d281ed4e241040d4b80dd88f25578aeb",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "c4d01a41f9844038bea2450d53682c04",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "MasterRecordId"
+                        },
+                        "generate": false,
+                        "index": 29
+                    }
+                },
+                "Name": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "j1686fcb05e44a268ef0a407b630861c",
+                        "name": {
+                            "kuid": "h0d2a6d3be3543de8914e6e30ef96cad",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "c17a629b9d5d42b5a95936266a57a596",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Name"
+                        },
+                        "generate": true,
+                        "index": 1
+                    }
+                },
+                "NumberOfEmployees": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "g87a6a6a295145d786469fddef45b04e",
+                        "name": {
+                            "kuid": "b81d06038b2642dab59d5921225c3afd",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "b1d9c41c6f1341b79654daae0e13607d",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "NumberOfEmployees"
+                        },
+                        "generate": true,
+                        "index": 18
+                    }
+                },
+                "OwnerId": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "f407e6505d8b45288e72f32459c72c4f",
+                        "name": {
+                            "kuid": "d2206b203dbe480f8eeb32d1529d36e9",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "d92333e3a4454f37a83369d27df5a72e",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "OwnerId"
+                        },
+                        "generate": false,
+                        "index": 40
+                    }
+                },
+                "ParentId": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a942392df99145bd9cb577658081c608",
+                        "name": {
+                            "kuid": "f2b91d62f3044caa9cb8c379d9d627a6",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "e560347eeafb40dcaf961315e38d896a",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ParentId"
+                        },
+                        "generate": false,
+                        "index": 31
+                    }
+                },
+                "Phone": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "eb41592c58624e96891bd9abf9966c98",
+                        "name": {
+                            "kuid": "ba2f8604490f470994744f578db1a9e3",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a53d3a17ff8449bf8cf4713a2d0fe1f1",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Phone"
+                        },
+                        "generate": true,
+                        "index": 10
+                    }
+                },
+                "PhotoUrl": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a18180fc349445c781f6d4d532fe23e4",
+                        "name": {
+                            "kuid": "b954a98528474c4088a2ace8940fe3df",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "ec667c14426d487c9db1205788489e4b",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "PhotoUrl"
+                        },
+                        "generate": true,
+                        "index": 14
+                    }
+                },
+                "ShippingAddress": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "h9e4bf19e3f24d08bc869e22de27a509",
+                        "name": {
+                            "kuid": "j8e78cd9e457495b9d7d7bd41c2d702f",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "b575bd9b58ba4246b55ad7e0b64039cf",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingAddress"
+                        },
+                        "generate": true,
+                        "index": 9
+                    }
+                },
+                "ShippingCity": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "e0453acee1e142fe91a1b6e98b0057d5",
+                        "name": {
+                            "kuid": "fd5763d23bcc44548ad5d317b6afebcf",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "eb44028768314a00929dff0cd0b96b6b",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingCity"
+                        },
+                        "generate": true,
+                        "index": 3
+                    }
+                },
+                "ShippingCountry": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "f3177cabdf8c40aaa59782bb5ef4cc0e",
+                        "name": {
+                            "kuid": "c9604faa176549989d646b6cd6dd0397",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "d8b9753be7c84a41bbf1f6831d2da382",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingCountry"
+                        },
+                        "generate": true,
+                        "index": 6
+                    }
+                },
+                "ShippingLatitude": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "c6172389c56f4b22bdf62b158020d074",
+                        "name": {
+                            "kuid": "iea9026d07444e109fbcef0a6b1d0832",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "c7b5b4abe55d460fa3e8b6cfc1b86f30",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingLatitude"
+                        },
+                        "generate": true,
+                        "index": 7
+                    }
+                },
+                "ShippingLongitude": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "f5a79597280a48eaa37ef5e6211c66cb",
+                        "name": {
+                            "kuid": "fcd86cf5817a45b1ae460a76f9db9e73",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "h252cf0b0785468d891e3490f211092a",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingLongitude"
+                        },
+                        "generate": true,
+                        "index": 8
+                    }
+                },
+                "ShippingPostalCode": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "c0f3ddad04d34065b4cf24c22a39e2f2",
+                        "name": {
+                            "kuid": "f8170d3797f0430491833e2a2d6b3eab",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "ac182ffc2389423f8daa55c5dad9c625",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingPostalCode"
+                        },
+                        "generate": true,
+                        "index": 5
+                    }
+                },
+                "ShippingState": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "j784f1027a38452383945f1d02de5b36",
+                        "name": {
+                            "kuid": "a3ee63d3232242baa8e1e8e8d1613526",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "baa8543b94cb4dbda6453865e75102d6",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingState"
+                        },
+                        "generate": true,
+                        "index": 4
+                    }
+                },
+                "ShippingStreet": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a85bc85158a04761825aaa70183a760d",
+                        "name": {
+                            "kuid": "e08b4349399845c68c9a02e33e22d3f6",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "gca9d46ef12e494e8c253463134d5b72",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "ShippingStreet"
+                        },
+                        "generate": true,
+                        "index": 2
+                    }
+                },
+                "Sic": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "g49b57cef0c740c89e8a387abd07ba2f",
+                        "name": {
+                            "kuid": "jec1abf5fc5240418016b70bfe8e6539",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "d2ed1f44192b4ebc8730b7ce7bd457b8",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Sic"
+                        },
+                        "generate": true,
+                        "index": 15
+                    }
+                },
+                "Site": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "jdc541e271f848329e32dd8f3db75ad7",
+                        "name": {
+                            "kuid": "bb63065b005e41aa9084777622ec8882",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "e89acc14793b4cff89555d3df67a8c19",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Site"
+                        },
+                        "generate": true,
+                        "index": 21
+                    }
+                },
+                "SystemModstamp": {
+                    "dataType": "date",
+                    "layoutConfig": {
+                        "kuid": "fadba59448284fa791db9bdccfe1895a",
+                        "name": {
+                            "kuid": "c26517d5cfbc46a49a1a7578863e4744",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "jdf07985dc344315b02371aaf38ee789",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "SystemModstamp"
+                        },
+                        "generate": false,
+                        "index": 27
+                    }
+                },
+                "TickerSymbol": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a76902e85a0f4af59d9efa2cd26af6e0",
+                        "name": {
+                            "kuid": "c9c7356b98d94f5091ce9c3c55cc1561",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "ab5bf04729064554a98ea3906d0521e1",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "TickerSymbol"
+                        },
+                        "generate": true,
+                        "index": 19
+                    }
+                },
+                "Type": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "f2d9539945c54c07b5f4ab0b1069d324",
+                        "name": {
+                            "kuid": "a19b17efed08496192a9e95134341702",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "f68e53d902364ae29a9fdaf8cbf60d65",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Type"
+                        },
+                        "generate": false,
+                        "index": 30
+                    }
+                },
+                "Website": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "ede7c11b26c04603b3d37b16521b4a84",
+                        "name": {
+                            "kuid": "ib77b2b440d54fbea4efd2805c9fe24a",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "fb6cffe6bd534687b1b138636985e803",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Website"
+                        },
+                        "generate": true,
+                        "index": 13
+                    }
+                }
+            }
+        }
+    },
+    "wType": "FlexScrollContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

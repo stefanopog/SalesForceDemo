@@ -1,0 +1,16 @@
+{
+    "AS_FlexContainer_cb6e37b3c9d74d129952288ea5e07a0d": {
+        "id": "AS_FlexContainer_cb6e37b3c9d74d129952288ea5e07a0d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_bda8857751804d14bc83dc8e50c68b53",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.application.openURL(self.view.lblWebsiteValue.text);"
+        }]
+    }
+}

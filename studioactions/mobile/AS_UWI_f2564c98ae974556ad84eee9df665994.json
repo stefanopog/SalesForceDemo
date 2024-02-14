@@ -1,0 +1,77 @@
+{
+    "AS_UWI_f2564c98ae974556ad84eee9df665994": {
+        "id": "AS_UWI_f2564c98ae974556ad84eee9df665994",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "name": "menuindex",
+            "datatype": "collection"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "je2ee701f7ac410991eaae2304d465fd",
+            "name": "frmAccountDetail"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_e596b07e76f441c5b2d4bf1d69379105",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.advancedhamburgermenu.hideSlidingMenu();",
+            "parentId": null
+        }, {
+            "id": "IF_CONDITION_c94858e8ff5048f4a3659b7e95cfe588",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "menuindex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0"
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "ELSE_IF_CONDITION_d7fdbcefde884d1b83fe479a49cb7cbf",
+            "type": "ELSE_IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "menuindex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "1"
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "NAVIGATE_TO_FORM__ce586354af7e4eadbb08b32b6d6a72bc",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAccounts",
+            "formKUID": "cd9c66a02fe847cc9025d2120fd016e0",
+            "projectName": "SalesForceDemo",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "ELSE_IF_CONDITION_d7fdbcefde884d1b83fe479a49cb7cbf",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ELSE_IF_CONDITION_e6ee8f2fb7364669becc88234bc1835d",
+            "type": "ELSE_IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "menuindex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "2"
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "EXIT_APP_daab3faae9404b3ca760aa73888e6eb3",
+            "type": "EXIT_APP",
+            "parentId": "ELSE_IF_CONDITION_e6ee8f2fb7364669becc88234bc1835d",
+            "callbackType": null
+        }]
+    }
+}
